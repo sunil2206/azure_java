@@ -38,5 +38,13 @@ public class BeverageController {
         BigDecimal totalBill = coreService.getOrderTotalBill(order);
         return new ResponseEntity<>(new ApiResponseSuccess(totalBill), HttpStatus.OK);
     }
+    @GetMapping(
+        path = "/",
+        produces = "application/json")
+  
+    public string GetAutoCodeC()
+    {
+        return "Springboot working";
+    }
 }
 
