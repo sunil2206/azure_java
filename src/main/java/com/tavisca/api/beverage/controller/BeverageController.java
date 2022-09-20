@@ -40,7 +40,7 @@ public class BeverageController {
     }
     RequestMapping(method = GET, value = "/orders", produces = MediaType.APPLICATION_JSON_VALUE)
   
-    public  ResponseEntity<string> GetAutoCodeC()
+    public  ResponseEntity<String> GetAutoCodeC()
     {
         return new ResponseEntity<>(new ApiResponseSuccess("working"), HttpStatus.OK);
     }
