@@ -40,9 +40,9 @@ public class BeverageController {
     }
     RequestMapping(method = GET, value = "/orders", produces = MediaType.APPLICATION_JSON_VALUE)
   
-    public string GetAutoCodeC()
+    public  ResponseEntity<string> GetAutoCodeC()
     {
-        return "Springboot working";
+        return new ResponseEntity<>(new ApiResponseSuccess("working"), HttpStatus.OK);
     }
 }
 
