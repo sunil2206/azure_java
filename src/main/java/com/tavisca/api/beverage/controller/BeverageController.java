@@ -38,11 +38,9 @@ public class BeverageController {
         BigDecimal totalBill = coreService.getOrderTotalBill(order);
         return new ResponseEntity<>(new ApiResponseSuccess(totalBill), HttpStatus.OK);
     }
-    RequestMapping(method = GET, value = "/orders", produces = MediaType.APPLICATION_JSON_VALUE)
-  
-    public  ResponseEntity<String> GetAutoCodeC()
-    {
-        return new ResponseEntity<>(new ApiResponseSuccess("working"), HttpStatus.OK);
-    }
+    @RequestMapping(value="/controller", method=GET)
+   public String foo() {
+      return "Response!";
+   }
 }
 
