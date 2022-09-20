@@ -38,9 +38,9 @@ public class BeverageController {
         BigDecimal totalBill = coreService.getOrderTotalBill(order);
         return new ResponseEntity<>(new ApiResponseSuccess(totalBill), HttpStatus.OK);
     }
-    @RequestMapping(value="/controller", method=GET)
-   public String foo() {
-      return "Response!";
-   }
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ResponseEntity<String> sayHello() {
+        return ResponseEntity.ok("Hello");
+    }
 }
 
